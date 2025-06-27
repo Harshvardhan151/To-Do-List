@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 60px;
+  min-height: 100vh;
+  transition: background 0.3s;
+  color: #222;
+}
+
+.container {
+  background: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  transition: background 0.3s;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#add-btn {
+  padding: 10px 15px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background-color: #4f46e5;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background: #f3f4f6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+li input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+li span {
+  flex: 1;
+  cursor: pointer;
+}
+
+button.delete {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.delete:hover {
+  background: #dc2626;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+body.dark .container {
+  background: #374151;
+}
+
+body.dark li {
+  background: #4b5563;
+}
+
+body.dark #task-input {
+  background-color: #1f2937;
+  color: #f9fafb;
+  border: 1px solid #4b5563;
+}
+
+body.dark #add-btn {
+  background-color: #818cf8;
+}
+
+body.dark #add-btn:hover {
+  background-color: #6366f1;
+}
+
+body.dark button.delete {
+  background-color: #f87171;
+}
+
+body.dark button.delete:hover {
+  background-color: #ef4444;
+}
+
+body.dark,
+body.dark h1,
+body.dark input,
+body.dark button,
+body.dark li,
+body.dark span {
+  color: #f9fafb;
+}
+
+body.dark input::placeholder {
+  color: #d1d5db;
+}
+
+#dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+body.dark #dark-toggle {
+  background-color: #6b7280;
+  color: white;
+}
+
+/* 📊 Progress Bar */
+.progress-container {
+  background: #e5e7eb;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #10b981;
+  transition: width 0.3s ease;
+}
+
+body.dark .progress-container {
+  background: #4b5563;
+}
+
+body.dark #progress-bar {
+  background: #22c55e;
+}
+.progress-wrapper {
+  margin-bottom: 20px;
+}
+
+#progress-text {
+  margin-bottom: 6px;
+  font-size: 14px;
+  text-align: center;
+  color: #374151;
+}
+
+body.dark #progress-text {
+  color: #d1d5db;
+}
